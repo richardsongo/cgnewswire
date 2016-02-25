@@ -1,6 +1,6 @@
 {% set allEntries = craft.entries.section('blog').limit(null) %}
 
-    <ul>
+    <ul class="releases">
       
         {% for date, entries in allEntries | group("postDate|date('F Y')") limit="10" %}
             <h3>{{ date }}</h3>
