@@ -1,0 +1,70 @@
+<form id="submit" class="content">
+
+  <h2>Press Release <span>[+]</span></h2>
+  <fieldset id="primary" style="display: none;">
+    <label>Title <span class="required">*</span></label>
+    <input class="big required text passive" type="text" name="title" value="" placeholder="Enter the title of the release." default="">
+    <div class="half">
+      <label>Location <span class="required">*</span></label>
+      <input class="required text passive" type="text" name="excerpt" value="" placeholder="ex. Raleigh, NC" default="">
+    </div>
+    <div class="half">
+      <label>Date (MM/DD/YYYY) <span class="required">*</span></label>
+      <input class="required text passive" type="text" name="date" value="02/25/2016" default="02/25/2016">
+    </div>
+    <div class="clear">&nbsp;</div>
+    <label>Content <span class="required">*</span></label>
+    <textarea class="required" id="submit-content" name="content" placeholder="Enter the contents of the release. Do not include the date or company description." default=""></textarea>
+  </fieldset>
+  
+  <h2>Press Contact <span>[+]</span></h2>
+  <fieldset id="contact" class="" style="display: none;">
+    <label>Name</label>
+    <input class="big text" type="text" name="contact-name" value="" placeholder="John Smith" default="">
+    <div class="half">
+      <label>Email</label>
+      <input class="email text" type="text" name="contact-email" value="" placeholder="email@example.com" default="">
+    </div>
+    <div class="half">
+      <label>Phone</label>
+      <input class="text" type="text" name="contact-phone" value="" placeholder="###-###-####" default="">
+    </div>
+    <div class="clear">&nbsp;</div>
+  </fieldset>
+  
+  <h2>Company Information <span>[+]</span></h2>
+  <fieldset id="contact" class="" style="display: none;">
+    <label>Website URL <span class="required">*</span></label>
+    <input class="required url text" type="text" name="company-website" value="" placeholder="http://www.abc-company.com" style="margin-bottom: 3px;" default="">
+    <p style="margin-bottom: 6px;"><a href="#" id="load-company-data">Use existing data</a> for this URL from an earlier press release.</p>
+    
+    <label>Company Name <span class="required">*</span></label>
+    <input class="big required text" type="text" name="company-name" value="" placeholder="ABC Corporation" default="">
+    
+    <div id="new-company">
+      <label>Mini-Bio <span class="required">*</span></label>
+      <textarea class="required" id="submit-content" name="company-content" default=""></textarea>
+      <label>Blog URL</label>
+      <input class="url text" type="text" name="company-blog" value="" placeholder="http://www.abc-company.com/blog" default="">
+      <label>Twitter URL</label>
+      <input class="url text" type="text" name="company-twitter" value="" placeholder="http://www.twitter.com/abc" default="">
+      <label>LinkedIn URL</label>
+      <input class="url text" type="text" name="company-linkedin" value="" placeholder="http://www.linkedin.com/abc" default="">
+      <label>Facebook URL</label>
+      <input class="url text" type="text" name="company-facebook" value="" placeholder="http://www.facebook.com/abc" default="">
+    </div><!-- newcompany -->
+  </fieldset>
+  
+  <h2>Multimedia Attachments <span>[-]</span></h2>
+  <fieldset id="contact" class="" style="display: block;">
+    <label>URL</label>
+    <input class="url text" type="text" name="attachmentOne" value="" placeholder="http://www.youtube.com/watch?v=Fm4krqIdfTA" default="">
+    <label>URL</label>
+    <input class="url text" type="text" name="attachmentTwo" value="" placeholder="http://www.slideshare.net/PresentationAdvisors/social-media-for-business-5456817" default="">
+    <label>URL</label>
+    <input class="url text" type="text" name="attachmentThree" value="" placeholder="http://www.flickr.com/photos/gethifi/4644754819/" default="">
+  </fieldset>
+  
+  <br>
+  <input type="submit" value="Submit Form">
+</form>
