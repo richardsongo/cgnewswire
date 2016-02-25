@@ -1,0 +1,16 @@
+
+{% set allEntries = craft.entries.section('blog').limit(null) %}
+{% for year, entriesInYear in allEntries | group("postDate.year") %}
+    <h2>Archives de {{ year }}</h2>
+    <ul>
+      
+        {% for date, entries in entriesInYear | group("postDate|date('F Y')") %}
+            <h3>{{ date }}</h3>
+            <ul class="headline--list">
+                {% for entry in entries %}
+                    <li><a href="{{ entry.getLink() }}">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+{% endfor %}
