@@ -39,8 +39,13 @@
     </div>
     <div class="clear">&nbsp;</div>
     <label>Content <span class="required">*</span></label>
-    <textarea class="required" id="submit-content" name="content" placeholder="Enter the contents of the release. Do not include the date or company description." default=""></textarea>
+    <textarea class="required" id="body" name="fields[body]" placeholder="Enter the contents of the release. Do not include the date or company description." default="">
+        {%- if entry is defined %}{{ entry.body }}{% endif -%}
+    </textarea>
+  
   </fieldset>
+  
+  
   
   <h2>Press Contact <span>[+]</span></h2>
   <fieldset id="contact" class="" style="display: none;">
